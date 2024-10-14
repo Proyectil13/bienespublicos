@@ -35,6 +35,94 @@
 
                 </div>
 
+                <div class="form-group">
+
+                    {!! Form::label('descripcion', 'Descripcion') !!}
+                    {!! Form::text('descripcion', null, ['class' => 'form-control', 'placeholder' => 'ingrese la Descripcion']) !!}
+
+                    @error('descripcion')
+                    <span class="text-danger">{{$message}}</span>                        
+                    @enderror
+
+
+                </div>
+
+                <div class="form-group">
+                    
+                    {!! Form::label('clasi_bien', 'Clasificacion del Bien') !!}
+                    {!! Form::text('clasi_bien', null, ['class' => 'form-control', 'placeholder' => 'ingrese la Clasificacion del bien']) !!}
+
+                    @error('clasi_bien')
+                    <span class="text-danger">{{$message}}</span>                        
+                    @enderror
+
+
+                </div>
+
+                <div class="form-group">
+                    
+                    {!! Form::label('marca', 'Marca') !!}
+                    {!! Form::text('marca', null, ['class' => 'form-control', 'placeholder' => 'ingrese la Clasificacion del bien']) !!}
+
+                    @error('marca')
+                    <span class="text-danger">{{$message}}</span>                        
+                    @enderror
+
+
+                </div>
+
+                <div class="form-group">
+                    
+                    {!! Form::label('modelo', 'Modelo') !!}
+                    {!! Form::text('modelo', null, ['class' => 'form-control', 'placeholder' => 'ingrese la Clasificacion del bien']) !!}
+
+                    @error('modelo')
+                    <span class="text-danger">{{$message}}</span>                        
+                    @enderror
+
+
+                </div>
+
+                <div class="form-group">
+                    
+                    {!! Form::label('serial', 'Serial') !!}
+                    {!! Form::text('serial', null, ['class' => 'form-control', 'placeholder' => 'ingrese la Clasificacion del bien']) !!}
+
+                    @error('serial')
+                    <span class="text-danger">{{$message}}</span>                        
+                    @enderror
+
+
+                </div>
+
+                <div class="form-group">
+                    
+                    {!! Form::label('color', 'Color') !!}
+                    {!! Form::text('color', null, ['class' => 'form-control', 'placeholder' => 'ingrese la Clasificacion del bien']) !!}
+
+                    @error('color')
+                    <span class="text-danger">{{$message}}</span>                        
+                    @enderror
+
+
+                </div>
+
+                <div class="form-group">
+                    
+                    {!! Form::label('costo_bs', 'Costo_Bs') !!}
+                    {!! Form::number('costo_bs', null, ['class' => 'form-control','step'=>'any','placeholder' => 'ingrese la Clasificacion del bien']) !!}
+
+                    @error('costo_bs')
+                    <span class="text-danger">{{$message}}</span>                        
+                    @enderror
+
+
+                </div>
+
+
+
+
+
                     {!! Form::submit('Crear BienPublico', ['class'=> 'btn btn-primary']) !!}
 
                 {!! Form::close() !!}
