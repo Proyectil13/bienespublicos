@@ -20,28 +20,7 @@
 
                 {!! Form::model($biene,['route' => ['admin.bienes.update', $biene], 'method' => 'put'])!!}
 
-                <div class="form-group">
-
-                    {!! Form::label('id', 'Bien Publico') !!}
-                    {!! Form::text('id', null, ['class' => 'form-control', 'placeholder' => 'ingrese el numero del bien publico']) !!}
-
-                    @error('bien_public')
-                        <span class="text-danger">{{$message}}</span>                        
-                    @enderror
-
-                </div>
-
-                <div class="form-group">
-
-                    {!! Form::label('item', 'Item') !!}
-                    {!! Form::text('item', null, ['class' => 'form-control', 'placeholder' => 'ingrese el numero del ITEM']) !!}
-
-                    @error('item')
-                    <span class="text-danger">{{$message}}</span>                        
-                @enderror
-
-
-                </div>
+                    @include('admin.bienes.formulario.form')
 
                     {!! Form::submit('Actualizar BienPublico', ['class'=> 'btn btn-primary']) !!}
 

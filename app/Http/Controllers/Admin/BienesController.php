@@ -26,7 +26,16 @@ class BienesController extends Controller
      */
     public function create()
     {
-        return view('admin.bienes.create');
+
+            $estado = [
+
+                'OPERATIVO' => 'OPERATIVO',
+                'INOPERATIVO' => 'INOPERATIVO'
+                                 
+            ];
+
+
+        return view('admin.bienes.create', compact('estado'));
     }
 
     /**
@@ -40,7 +49,11 @@ class BienesController extends Controller
         $request->validate([
 
             'id' =>'required|unique:bienes',
-            'item' => 'required|unique:bienes'
+            'item' => 'required|unique:bienes',
+
+
+            'estado' => 'required'
+             
         ]);  
 
         $biene = Bienes::create($request->all());
@@ -67,7 +80,15 @@ class BienesController extends Controller
      */
     public function edit(Bienes $biene)
     {   
-        return view('admin.bienes.edit', compact('biene'));
+
+        $estado = [
+
+            'OPERATIVO' => 'OPERATIVO',
+            'INOPERATIVO' => 'INOPERATIVO'
+                             
+        ];
+
+        return view('admin.bienes.edit', compact('biene','estado'));
     }
 
     /**
