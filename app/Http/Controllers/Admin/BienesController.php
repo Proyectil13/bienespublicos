@@ -48,11 +48,20 @@ class BienesController extends Controller
     {
         $request->validate([
 
-            'id' =>'required|unique:bienes',
-            'item' => 'required|unique:bienes',
-
-
-            'estado' => 'required'
+            'id'   =>'required|unique:bienes',
+            'item' => 'integer|required|unique:bienes',
+            'descripcion' => 'required',
+            'clasi_bien'  => 'required',
+            'marca' =>  'required',
+            'modelo' => 'required',
+            'serial' => 'required',
+            'color' =>  'required',
+            'costo_bs' => 'required',
+            'estado' =>  'required',
+            'responsable' => 'required',
+            'piso' =>   'integer|required',
+            'area' =>   'required',
+            
              
         ]);  
 

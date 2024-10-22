@@ -17,17 +17,17 @@ class CreateBienesTable extends Migration
             
             $table->id();
             $table->integer('item');
-            $table->string('descripcion')->nullable();
-            $table->string('clasi_bien', 10)->nullable();
-            $table->string('marca', 45)->nullable();
-            $table->string('modelo',45)->nullable();
-            $table->string('serial',45)->nullable();
-            $table->string('color', 45)->nullable();
-            $table->decimal('costo_bs', $precision = 7, $scale = 6)->nullable();
-            $table->enum('estado', ['OPERATIVO', 'INOPERATIVO'])->nullable();
-            $table->string('responsable', 45)->nullable();
-            $table->integer('piso')->nullable();
-            $table->string('area', 45)->nullable();    
+            $table->string('descripcion');
+            $table->string('clasi_bien', 10);
+            $table->string('marca', 45);
+            $table->string('modelo',45);
+            $table->string('serial',45);
+            $table->string('color', 45);
+            $table->decimal('costo_bs', $precision = 7, $scale = 6);
+            $table->enum('estado', ['OPERATIVO', 'INOPERATIVO']);
+            $table->string('responsable', 45);
+            $table->integer('piso');
+            $table->string('area', 45);    
             
             
             $table->timestamps();
