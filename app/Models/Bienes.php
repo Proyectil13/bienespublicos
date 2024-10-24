@@ -13,7 +13,7 @@ class Bienes extends Model
 
     public $incrementing = false;
 
-    protected $fillable = ['id', 'item'];
+    protected $fillable = ['id', 'item','descripcion','clasi_bien','marca','modelo','serial','color','costo_bs','estado','responsable','piso','area'];
 
 
 

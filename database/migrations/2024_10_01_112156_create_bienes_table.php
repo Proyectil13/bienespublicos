@@ -27,9 +27,8 @@ class CreateBienesTable extends Migration
             $table->enum('estado', ['OPERATIVO', 'INOPERATIVO']);
             $table->string('responsable', 45);
             $table->integer('piso');
-            $table->string('area', 45);    
-            
-            
+            $table->string('area', 45);   
+                        
             $table->timestamps();
         });
     }

@@ -54,16 +54,17 @@ class BienesController extends Controller
             'clasi_bien'  => 'required',
             'marca' =>  'required',
             'modelo' => 'required',
-            'serial' => 'required',
+            'serial' => 'required', 
             'color' =>  'required',
-            'costo_bs' => 'required',
+            'costo_bs' => 'required|regex:/^[\d]{0,7}(\.[\d]{1,6})?$',
             'estado' =>  'required',
             'responsable' => 'required',
             'piso' =>   'integer|required',
             'area' =>   'required',
-            
-             
-        ]);  
+                   
+        ]);
+
+          
 
         $biene = Bienes::create($request->all());
 
